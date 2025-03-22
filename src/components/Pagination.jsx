@@ -36,17 +36,22 @@ const Pagination = ({ items, itemsPerPage }) => {
           Prev
         </button>
 
-        {[...Array(totalPages)].map((_, index) => (
-          <button
-            key={`btn-${index}`}
-            className={`pagination__page-btn ${
-              currentPage === index + 1 ? "active" : ""
-            }`}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </button>
-        ))}
+        {[...Array(totalPages)].map(
+          (
+            _,
+            index //convert number to array for looping
+          ) => (
+            <button
+              key={`btn-${index}`}
+              className={`pagination__page-btn ${
+                currentPage === index + 1 ? "active" : ""
+              }`}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </button>
+          )
+        )}
 
         <button
           className="pagination__page-btn"
