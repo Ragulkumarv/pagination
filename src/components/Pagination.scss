@@ -1,3 +1,49 @@
 h1 {
+  font-size: 2rem;
   text-align: center;
+}
+.pagination {
+  &__wrapper {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+
+    li {
+      background-color: #f8f9fa;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+  }
+  &__items--list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__page-btn {
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    &.active {
+      background-color: #ccc;
+    }
+
+    &:hover {
+      background-color: orange;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #ccc;
+    }
+  }
 }
