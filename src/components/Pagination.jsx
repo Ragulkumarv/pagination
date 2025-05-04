@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const Pagination = ({ items, itemsPerPage }) => {
+const Pagination = () => {
+  const items = new Array(50).fill("").map((_, index) => `Item ${index + 1}`);
+  const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
